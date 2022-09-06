@@ -36,7 +36,12 @@ const SignUp = () => {
 
         localStorage.setItem("Data", JSON.stringify(userData))
 
-        navigate('/')
+        if(userData.email === "" || userData.firstname === "" || userData.lastname === "" || userData.password === "" || userData.confirmpassword === "" ){
+          alert('Please fill all the fields')
+        }
+        else{
+          navigate('/')
+        }
     }
 
 
@@ -51,13 +56,13 @@ const SignUp = () => {
       </header>
       <br />
       <div className='SignUp-form'>
-        <input type="email" onChange={handleChange} placeholder='Enter Email' value={userData.email} name='email' />
+        <input required type="email" onChange={handleChange} placeholder='Enter Email' value={userData.email} name='email' />
         <div>
-            <input type="text" onChange={handleChange} placeholder='Enter FirstName' value={userData.firstname} name='firstname' />
-            <input type="text" onChange={handleChange} placeholder='Enter LastName' value={userData.lastname} name='lastname' />
+            <input required type="text" onChange={handleChange} placeholder='Enter FirstName' value={userData.firstname} name='firstname' />
+            <input required type="text" onChange={handleChange} placeholder='Enter LastName' value={userData.lastname} name='lastname' />
         </div>
-        <input type="password" onChange={handleChange} placeholder='Enter Password' value={userData.password} name='password' />
-        <input type="password" onChange={handleChange} placeholder='Confirm Password' value={userData.confirmpassword} name='confirmpassword' />
+        <input required type="password" onChange={handleChange} placeholder='Enter Password' value={userData.password} name='password' />
+        <input required type="password" onChange={handleChange} placeholder='Confirm Password' value={userData.confirmpassword} name='confirmpassword' />
         <button className='SignUp-btn' onClick={handleClick} >Sign up</button>
       </div>
     </div>
