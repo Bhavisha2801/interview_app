@@ -1,0 +1,54 @@
+body{
+    background-color: #1e2432;
+}
+
+.Home{
+    background-color: #1e2432;
+}
+
+.table-data{
+    background-color: #46536f;
+    width: 70%;
+    margin: auto auto;
+}
+
+.home-top{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.home-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.home-search > input{
+    width: 300px;
+    height: 30px;
+}
+
+.horizontal-line{
+    /* width: 500px; */
+    background-color: grey;
+    border: 1px solid grey;
+}
+
+.logout-btn{
+    width: 150px;
+    background-color: #46536f;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.logout-btn:hover{
+    background-color: #59698b;
+    cursor: pointer;
+}
+
+.logout-btn:active{
+    width: 140px;
+}
